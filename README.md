@@ -31,9 +31,9 @@
 - [x] Axios
 - [x] styled-components
 
-## Iniciando Aplicação
+## Acessando a Aplicação
 
-1. Acesse o site `https://developers.zomato.com/api?lang=pt#headline2`.<br />
+1. Acesse o site `https://atomiclist.netlify.app/`.<br />
 
 ## Iniciando a aplicação atraves de clone
 
