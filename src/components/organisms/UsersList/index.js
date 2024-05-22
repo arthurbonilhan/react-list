@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Grid } from '@material-ui/core'
-import CardUser from '../molecules/CardUser'
 import { api } from '../../utils/api'
+import CardUser from '../../molecules/CardUser'
 
 const UsersList = () => {
   const [users, setUsers] = useState([])

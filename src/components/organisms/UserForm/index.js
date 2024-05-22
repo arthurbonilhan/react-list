@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { MyInput } from '../atoms/Input'
-import { MyButton } from '../atoms/Button'
 import { api } from '../../utils/api'
+import Input from '../../atoms/Input'
+import ButtonConfirm from '../../atoms/Button'
 
 const UserForm = ({ user = {}, onSubmit }) => {
   const [name, setName] = useState(user.name || '')
@@ -29,10 +29,10 @@ const UserForm = ({ user = {}, onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <MyInput label="Nome" value={name} onChange={(event) => setName(event.target.value)} />
-      <MyInput label="Email" value={email} onChange={(event) => setEmail(event.target.value)} />
-      <MyInput label="Cargo" value={role} onChange={(event) => setRole(event.target.value)} />
-      <MyButton type="submit" label={user.id ? 'Atualizar' : 'Cadastrar'} />
+      <Input label="Nome" value={name} onChange={(event) => setName(event.target.value)} />
+      <Input label="Email" value={email} onChange={(event) => setEmail(event.target.value)} />
+      <Input label="Cargo" value={role} onChange={(event) => setRole(event.target.value)} />
+      <ButtonConfirm type="submit" label={user.id ? 'Atualizar' : 'Cadastrar'} />
     </form>
   )
 }
