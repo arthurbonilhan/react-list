@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Paper, Button, Typography, Grid } from '@material-ui/core'
+import { Container, Button, Grid } from '@material-ui/core'
 import UsersList from '../organisms/UsersList'
 import SearchInput from '../molecules/SearchInput'
 import api from '../utils/api'
 import Modal from '../molecules/Modal'
+import * as Styled from './style'
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -43,20 +44,27 @@ const App = () => {
   }
 
   return (
-    <Container maxWidth="md">
-      <Paper elevation={3} style={{ padding: '20px' }}>
+    <Styled.Container maxWidth="md">
+      <Styled.Paper elevation={3} style={{ padding: '20px' }}>
+        <Grid container justifyContent="center" alignItems="center">
+          <Styled.Typography variant="h5">Gerenciar Usuários</Styled.Typography>
+          <SearchInput onChange={handleSearchChange} />
+        </Grid>
         <Grid container justifyContent="space-between" alignItems="center">
-          <Typography variant="h5">Gerenciar Usuários</Typography>
+          <Styled.Typography variant="h5">Usuários</Styled.Typography>
           <Button variant="contained" color="primary" onClick={() => handleOpenForm(null)}>
             CADASTRAR
           </Button>
         </Grid>
-        <SearchInput onChange={handleSearchChange} />
-        <UsersList users={users} searchTerm={searchTerm} onOpenForm={handleOpenForm} />
-      </Paper>
+      </Styled.Paper>
+      <Container>
+        <Styled.UserListContainer>
+          <UsersList users={users} searchTerm={searchTerm} onOpenForm={handleOpenForm} />
+        </Styled.UserListContainer>
+      </Container>
 
       <Modal open={showFormModal} onClose={handleCloseFormModal} onSubmit={handleUserSubmit} />
-    </Container>
+    </Styled.Container>
   )
 }
 
