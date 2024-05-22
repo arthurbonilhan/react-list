@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = 'https://js-report-list.vercel.app/usuarios' || 'http://localhost:3001/usuarios'
+const baseURL = 'https://apiv2-nine.vercel.app/usuarios' || 'http://localhost:3001/usuarios'
 
 const getUsers = async () => {
   const response = await axios.get(baseURL)
