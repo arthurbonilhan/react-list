@@ -8330,6 +8330,11 @@ react-event-listener@^0.6.2:
     prop-types "^15.6.0"
     warning "^4.0.1"
 
+react-firebase-auth@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-firebase-auth/-/react-firebase-auth-1.0.3.tgz#8df331d0d01171fdaa5b2062c379e720ec72429a"
+  integrity sha512-KvmmF00pMKYvSX4H1nsLIMoT8682KNwHzlgQ33l6Lt2kSmepkdD7FhDFO17tk8n7hi09on6qriIx8OOZtfXxJA==
+
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
