@@ -1,30 +1,28 @@
 import React, { useState } from 'react'
-import { api } from '../../utils/api'
 import Input from '../../atoms/Input'
 import ButtonConfirm from '../../atoms/Button'
+import api from '../../utils/api'
 
 const UserForm = ({ user = {}, onSubmit }) => {
-  const [name, setName] = useState(user.name || '')
+  const [name, setName] = useState(user.nome || '')
   const [email, setEmail] = useState(user.email || '')
-  const [role, setRole] = useState(user.role || '')
+  const [role, setRole] = useState(user.tipoUsuario || '')
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     const newUser = {
-      name,
+      nome: name,
       email,
-      role,
+      tipoUsuario: role,
     }
 
     if (user.id) {
-      api.updateUser(user.id, newUser).then(() => {
-        onSubmit()
-      })
+      await api.updateUser(user.id, newUser)
     } else {
-      api.createUser(newUser).then(() => {
-        onSubmit()
-      })
+      await api.createUser(newUser)
     }
+
+    onSubmit()
   }
 
   return (

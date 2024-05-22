@@ -1,24 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Grid } from '@material-ui/core'
-import { api } from '../../utils/api'
 import CardUser from '../../molecules/CardUser'
 
-const UsersList = () => {
-  const [users, setUsers] = useState([])
-
-  useEffect(() => {
-    api.getUsers().then((response) => {
-      setUsers(response.data)
-    })
-  }, [])
+const UsersList = ({ users, searchTerm, onOpenForm }) => {
+  const filteredUsers = users?.filter((user) => {
+    const searchText = searchTerm.toLowerCase()
+    return (
+      user?.nome?.toLowerCase().includes(searchText) ||
+      user?.sobrenome?.toLowerCase().includes(searchText) ||
+      user?.email?.toLowerCase().includes(searchText)
+    )
+  })
 
   return (
     <Grid container spacing={3}>
-      {users.map((user) => (
-        <Grid item xs={12} md={6} key={user.id}>
-          <CardUser user={user} />
-        </Grid>
-      ))}
+      <CardUser user={filteredUsers} onOpenForm={onOpenForm} />
     </Grid>
   )
 }
