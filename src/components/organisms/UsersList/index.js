@@ -4,7 +4,7 @@ import CardUser from '../../molecules/CardUser'
 
 const UsersList = ({ users, searchTerm, onOpenForm }) => {
   const filteredUsers = users?.filter((user) => {
-    const searchText = searchTerm.toLowerCase()
+    const searchText = searchTerm?.toLowerCase()
     return (
       user?.nome?.toLowerCase().includes(searchText) ||
       user?.sobrenome?.toLowerCase().includes(searchText) ||
