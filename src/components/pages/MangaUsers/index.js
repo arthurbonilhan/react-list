@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Button, Grid } from '@material-ui/core'
+import { Container, Button, Grid, IconButton } from '@material-ui/core'
+import AccountCircleIcon from '@material-ui/icons/AccountCircle'
+import { useNavigate } from 'react-router-dom'
 import * as Styled from '../style'
 import UsersList from '../../organisms/UsersList'
 import SearchInput from '../../molecules/SearchInput'
@@ -11,6 +13,7 @@ const MangaUsers = () => {
   const [showFormModal, setShowFormModal] = useState(false)
   const [selectedUser, setSelectedUser] = useState(null)
   const [users, setUsers] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -43,18 +46,37 @@ const MangaUsers = () => {
     handleCloseFormModal()
   }
 
+  const handleLogout = () => {
+    sessionStorage.removeItem('user')
+    navigate('/login')
+  }
+
+  const handleProfileClick = () => {
+    navigate('/profile')
+  }
+
   return (
     <Styled.Container maxWidth="md">
       <Styled.Paper elevation={3} style={{ padding: '20px' }}>
         <Grid container justifyContent="center" alignItems="center">
-          <Styled.Typography variant="h5">Gerenciar Usuários</Styled.Typography>
-          <SearchInput onChange={handleSearchChange} />
+          <div>
+            <Styled.Typography variant="h5">Gerenciar Usuários</Styled.Typography>
+            <SearchInput onChange={handleSearchChange} />
+          </div>
         </Grid>
+
         <Grid container justifyContent="space-between" alignItems="center">
-          <Styled.Typography variant="h5">Usuários</Styled.Typography>
           <Button variant="contained" color="primary" onClick={() => handleOpenForm(null)}>
             CADASTRAR
           </Button>
+          <div>
+            <IconButton onClick={handleProfileClick} color="inherit">
+              <AccountCircleIcon />
+            </IconButton>
+            <Button variant="contained" color="primary" onClick={handleLogout}>
+              Sair
+            </Button>
+          </div>
         </Grid>
       </Styled.Paper>
       <Container>
