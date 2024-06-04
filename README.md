@@ -47,13 +47,13 @@ Projeto front:
 
 1. Clone o Projeto
 2. Rode `npm install` ou `yarn install` na raiz do projeto.<br />
-3. Rode `yarn start` e acesse `http://localhost:3000`.<br />
+3. Rode `yarn start` e acesse `http://localhost:3000/login`.<br />
 4. Em caso de dúvidas, favor entrar em contato.
 
 Projeto Back:
 
-1. Clone o Projeto https://drive.google.com/file/d/1_yOTEMYKVuF14w9E18cEt41UTNXJ1LIO/view
+1. Clone o Projeto https://github.com/arthurbonilhan/apiv2
 2. Rode `npm install` ou `yarn install` na raiz do projeto.<br />
-3. Rode `npm run start:backend` ou `yarn start:backend` e acesse `http://localhost:3001`.<br />
+3. Rode `npm start` ou `yarn start` e acesse `http://localhost:3001/usuarios`.<br />
 4. Em caso de dúvidas, favor entrar em contato.
 5. Verifique a versão do node o projeto do back se encontra na v4.9
