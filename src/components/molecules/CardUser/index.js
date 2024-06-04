@@ -61,7 +61,7 @@ const CardUser = ({ user }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {user.map((user) => (
+          {user?.map((user) => (
             <TableRow key={user.email}>
               <TableCell>{user.nome}</TableCell>
               <TableCell align="left">{user.tipoUsuario}</TableCell>

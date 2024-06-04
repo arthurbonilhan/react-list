@@ -76,6 +76,7 @@ const Login = () => {
           margin="normal"
           fullWidth
           required
+          autocomplete="off"
         />
         <TextField
           label="Senha"
@@ -85,6 +86,7 @@ const Login = () => {
           margin="normal"
           fullWidth
           required
+          autocomplete="off"
         />
         {error && (
           <Typography variant="body2" color="error">

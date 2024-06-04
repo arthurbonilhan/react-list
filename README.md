@@ -36,15 +36,22 @@
 
 1. Acesse o site `https://atomiclist.netlify.app/`.<br />
 
+## Mostrando Aplicação
+
+1. Fluxo user comum: https://www.loom.com/share/4d536e3129e842f1bf14b7c49067cf27
+2. Fluxo user adm: https://www.loom.com/share/63f9290c4b0b4b2090cc0299545f5cb1
+
 ## Iniciando a aplicação atraves de clone
 
 Projeto front:
+
 1. Clone o Projeto
 2. Rode `npm install` ou `yarn install` na raiz do projeto.<br />
 3. Rode `yarn start` e acesse `http://localhost:3000`.<br />
 4. Em caso de dúvidas, favor entrar em contato.
 
 Projeto Back:
+
 1. Clone o Projeto https://drive.google.com/file/d/1_yOTEMYKVuF14w9E18cEt41UTNXJ1LIO/view
 2. Rode `npm install` ou `yarn install` na raiz do projeto.<br />
 3. Rode `npm run start:backend` ou `yarn start:backend` e acesse `http://localhost:3001`.<br />
