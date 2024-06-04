@@ -46,6 +46,16 @@ Projeto front:
 3. Rode `yarn start` e acesse `http://localhost:3000/login`.<br />
 4. Em caso de dúvidas, favor entrar em contato.
 
+## Login ADM:
+
+"email": "usuario6@email.com.br",
+"senha": "123445",
+
+## Login Comum:
+
+"email": "usuario5@email.com.br",
+"senha": "123445"
+
 Projeto Back:
 
 1. Clone o Projeto https://github.com/arthurbonilhan/apiv2
