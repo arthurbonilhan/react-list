@@ -37,7 +37,7 @@ const Modal = ({ open, onClose, onSubmit, infoUser }) => {
   const handleSubmit = (event) => {
     event.preventDefault()
     const newUser = {
-      id: infoUser.id,
+      id: infoUser?.id,
       nome: name,
       sobrenome: surname,
       email: email,
