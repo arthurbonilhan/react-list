@@ -32,10 +32,6 @@
 - [x] styled-components
 - [x] react-router-dom
 
-## Acessando a Aplicação
-
-1. Acesse o site `https://atomiclist.netlify.app/`.<br />
-
 ## Mostrando Aplicação
 
 1. Fluxo user comum: https://www.loom.com/share/4d536e3129e842f1bf14b7c49067cf27
@@ -54,6 +50,6 @@ Projeto Back:
 
 1. Clone o Projeto https://github.com/arthurbonilhan/apiv2
 2. Rode `npm install` ou `yarn install` na raiz do projeto.<br />
-3. Rode `npm start` ou `yarn start` e acesse `http://localhost:3001/usuarios`.<br />
+3. Rode `npm start` ou `yarn start` e acesse `http://localhost:3005/usuarios`.<br />
 4. Em caso de dúvidas, favor entrar em contato.
 5. Verifique a versão do node o projeto do back se encontra na v4.9
