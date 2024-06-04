@@ -17,11 +17,11 @@
 - [x] Lista de Usuários cadastrados;
 - [x] Tela para cadastro de usuário;
 - [x] Edição de usuário;
-- [x] [obrigatório] O campo “Buscar usuário” deve filtrar a lista de usuários pelo nome digitado;
-- [x] [opcional] Autenticação
-- [x] [opcional] Usuário padrão deve ter acesso somente à lista e aos detalhes dos usuários cadastrados, mas nãodeve conseguir executar alterações;
-- [x] [opcional] Deve ser desenvolvida uma tela para autenticação;
-- [x] [opcional] Admin deve poder criar/editar/desativar outros usuários;
+- [x] O campo “Buscar usuário”
+- [x] Autenticação
+- [x] Usuário padrão deve ter acesso somente à lista e aos detalhes dos usuários cadastrados, mas nãodeve conseguir executar alterações;
+- [x] Deve ser desenvolvida uma tela para autenticação;
+- [x] Admin deve poder criar/editar/desativar outros usuários;
 
 ## Ferramentas utilizadas
 
