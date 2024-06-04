@@ -18,10 +18,10 @@
 - [x] Tela para cadastro de usuário;
 - [x] Edição de usuário;
 - [x] [obrigatório] O campo “Buscar usuário” deve filtrar a lista de usuários pelo nome digitado;
-- [ ] [opcional] Autenticação
-- [ ] [opcional] Usuário padrão deve ter acesso somente à lista e aos detalhes dos usuários cadastrados, mas nãodeve conseguir executar alterações;
-- [ ] [opcional] Deve ser desenvolvida uma tela para autenticação;
-- [ ] [opcional] Admin deve poder criar/ativar/desativar outros usuários;
+- [x] [opcional] Autenticação
+- [x] [opcional] Usuário padrão deve ter acesso somente à lista e aos detalhes dos usuários cadastrados, mas nãodeve conseguir executar alterações;
+- [x] [opcional] Deve ser desenvolvida uma tela para autenticação;
+- [x] [opcional] Admin deve poder criar/editar/desativar outros usuários;
 
 ## Ferramentas utilizadas
 
@@ -30,6 +30,7 @@
 - [x] Material-ui \ material-ui/icons
 - [x] Axios
 - [x] styled-components
+- [x] react-router-dom
 
 ## Iniciando Aplicação
 
