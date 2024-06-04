@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { TableContainer, Table, TableHead, TableRow, TableCell, TableBody, IconButton } from '@material-ui/core'
 import EditIcon from '@material-ui/icons/Edit'
 import DeleteIcon from '@material-ui/icons/Delete'
@@ -10,6 +10,14 @@ const CardUser = ({ user }) => {
   const [editModalOpen, setEditModalOpen] = useState(false)
   const [selectedUser, setSelectedUser] = useState(null)
   const [openCancelModal, setOpenCancelModal] = useState(false)
+  const [currentUser, setCurrentUser] = useState(null)
+
+  useEffect(() => {
+    const storedUser = sessionStorage.getItem('user')
+    if (storedUser) {
+      setCurrentUser(JSON.parse(storedUser))
+    }
+  }, [])
 
   const handleEditClick = (user) => {
     setSelectedUser(user)
@@ -39,7 +47,7 @@ const CardUser = ({ user }) => {
     setOpenCancelModal(false)
   }
 
-  console.log(selectedUser, '<<')
+  const isAdmin = currentUser && currentUser.tipoUsuario === 'Administrador'
 
   return (
     <TableContainer>
@@ -49,7 +57,7 @@ const CardUser = ({ user }) => {
             <TableCell>Usuário</TableCell>
             <TableCell align="left">Tipo de usuário</TableCell>
             <TableCell align="left">Usuário ativo</TableCell>
-            <TableCell align="left">Ações</TableCell>
+            {isAdmin && <TableCell align="left">Ações</TableCell>}
           </TableRow>
         </TableHead>
         <TableBody>
@@ -58,14 +66,16 @@ const CardUser = ({ user }) => {
               <TableCell>{user.nome}</TableCell>
               <TableCell align="left">{user.tipoUsuario}</TableCell>
               <TableCell align="left">{user.ativo ? 'Sim' : 'Não'}</TableCell>
-              <TableCell align="left">
-                <IconButton aria-label="edit" onClick={() => handleEditClick(user)}>
-                  <EditIcon />
-                </IconButton>
-                <IconButton aria-label="delete" onClick={() => handleDeleteUser(user)}>
-                  <DeleteIcon />
-                </IconButton>
-              </TableCell>
+              {isAdmin && (
+                <TableCell align="left">
+                  <IconButton aria-label="edit" onClick={() => handleEditClick(user)}>
+                    <EditIcon />
+                  </IconButton>
+                  <IconButton aria-label="delete" onClick={() => handleDeleteUser(user)}>
+                    <DeleteIcon />
+                  </IconButton>
+                </TableCell>
+              )}
             </TableRow>
           ))}
         </TableBody>
