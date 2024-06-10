@@ -32,6 +32,10 @@
 - [x] styled-components
 - [x] react-router-dom
 
+## URl DO PROJETO
+
+https://bonilha-lists.netlify.app/
+
 ## Mostrando Aplicação
 
 1. Fluxo user comum: https://www.loom.com/share/4d536e3129e842f1bf14b7c49067cf27
